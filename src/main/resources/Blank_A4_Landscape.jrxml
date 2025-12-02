@@ -5,16 +5,11 @@
 	
 	<queryString language="SQL">
 		<![CDATA[SELECT 
-    p.full_name AS nombre_participante,
-    p.national_id AS cedula,
-    p.career AS carrera,
-    t.name AS nombre_equipo,
-    s.score AS puntaje
-FROM profiles p
-JOIN team_members tm ON p.id = tm.user_id
-JOIN teams t ON tm.team_id = t.id
-LEFT JOIN scoreboard s ON t.id = s.team_id
-ORDER BY p.full_name ASC]]>
+    full_name AS nombre_participante,
+    national_id AS cedula,
+    career AS carrera
+FROM profiles
+ORDER BY full_name ASC]]>
 	</queryString>
 	
 	<field name="nombre_participante" class="java.lang.String"/>
