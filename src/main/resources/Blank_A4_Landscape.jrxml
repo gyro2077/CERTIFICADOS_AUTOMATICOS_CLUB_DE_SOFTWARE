@@ -23,16 +23,16 @@ ORDER BY p.full_name ASC]]>
 		<band height="540" splitType="Stretch">
 			
 			<image scaleImage="FillFrame">
-				<reportElement x="0" y="0" width="760" height="540" uuid="img-bg"/>
+				<reportElement x="0" y="0" width="760" height="540" uuid="a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d"/>
 				<imageExpression><![CDATA["/home/gyro/Documents/CLUB/Blue and White Completion Certificate.png"]]></imageExpression>
 			</image>
 
 			<textField textAdjust="ScaleFont">
-				<reportElement x="10" y="220" width="740" height="60" uuid="txt-name"/>
+				<reportElement x="10" y="220" width="740" height="60" uuid="f1e2d3c4-b5a6-4978-9c8d-7e6f5a4b3c2d"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					
-					<font fontName="SansSerif" size="30" isBold="true" 
-                          pdfFontName="Helvetica-Bold" 
+					<font fontName="SansSerif" size="30" isBold="true" isItalic="true"
+                          pdfFontName="Helvetica-BoldOblique" 
                           isPdfEmbedded="false"/>
                           
 				</textElement>
