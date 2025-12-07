@@ -8,12 +8,14 @@ spring:
     password: ${SPRING_DATASOURCE_PASSWORD}
     driver-class-name: org.postgresql.Driver
     hikari:
-      # Configuración del pool de conexiones
-      maximum-pool-size: 5  # Máximo 5 conexiones (Render free tier tiene límite bajo)
-      minimum-idle: 2        # Mínimo 2 conexiones idle
-      connection-timeout: 30000  # 30 segundos timeout
-      idle-timeout: 600000   # 10 minutos antes de cerrar conexión idle
-      max-lifetime: 1800000  # 30 minutos vida máxima de una conexión
+      # Configuración ultra conservadora para Render free tier (límite MUY bajo)
+      maximum-pool-size: 2   # Solo 2 conexiones máximo
+      minimum-idle: 1        # Solo 1 conexión idle
+      connection-timeout: 60000     # 60 segundos para obtener conexión
+      idle-timeout: 300000   # 5 minutos antes de cerrar conexión idle
+      max-lifetime: 1200000  # 20 minutos vida máxima
+      initialization-fail-timeout: -1  # No fallar al inicio si DB no está disponible
+      leak-detection-threshold: 60000  # Detectar conexiones que no se liberan
 
 server:
   # Importante: Render usa la variable PORT para saber dónde escucha tu app

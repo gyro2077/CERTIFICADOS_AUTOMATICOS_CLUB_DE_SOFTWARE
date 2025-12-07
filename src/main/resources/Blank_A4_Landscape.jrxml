@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.21.5.final using JasperReports Library version 6.21.5-74d586df47b25dbd05bd0957999819196e59934a  -->
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4_Landscape" pageWidth="760" pageHeight="540" orientation="Landscape" columnWidth="760" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="571b73b8-a4d8-464c-abaa-0a6b6403383d">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4_Landscape" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="842" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="571b73b8-a4d8-464c-abaa-0a6b6403383d">
 	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="SupabaseDB"/>
 	<parameter name="cedula" class="java.lang.String"/>
@@ -50,22 +50,22 @@ ORDER BY full_name ASC]]>
 		<band splitType="Stretch"/>
 	</background>
 	<detail>
-		<band height="540" splitType="Stretch">
+		<band height="595" splitType="Stretch">
 			<image scaleImage="FillFrame">
-				<reportElement x="0" y="0" width="760" height="540" uuid="a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d"/>
+				<reportElement x="0" y="0" width="842" height="595" uuid="a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d"/>
 				<imageExpression><![CDATA["Blue and White Completion Certificate.png"]]></imageExpression>
 			</image>
 			<textField textAdjust="ScaleFont">
-				<reportElement x="10" y="190" width="740" height="60" uuid="f1e2d3c4-b5a6-4978-9c8d-7e6f5a4b3c2d"/>
+				<reportElement x="20" y="210" width="802" height="70" uuid="f1e2d3c4-b5a6-4978-9c8d-7e6f5a4b3c2d"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="SansSerif" size="30" isBold="true" isItalic="true" pdfFontName="Helvetica-BoldOblique" isPdfEmbedded="false"/>
+					<font fontName="SansSerif" size="36" isBold="true" isItalic="true" pdfFontName="Helvetica-BoldOblique" isPdfEmbedded="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{nombre_participante}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="StretchHeight">
-				<reportElement x="20" y="250" width="720" height="120" uuid="b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d6e"/>
+				<reportElement x="40" y="290" width="762" height="140" uuid="b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d6e"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Serif" size="22" isBold="false" isItalic="false" pdfFontName="Times-Roman" isPdfEmbedded="false"/>
+					<font fontName="Serif" size="24" isBold="false" isItalic="false" pdfFontName="Times-Roman" isPdfEmbedded="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Perteneciente a la Carrera: " + $F{carrera} + ", por haber participado en el evento \"CAPTURE THE FLAG\",\norganizado por el Club de Desarrollo de Software ESPE."]]></textFieldExpression>
 			</textField>
