@@ -24,10 +24,10 @@ public class ReportController {
     @GetMapping("/generar-certificados")
     public ResponseEntity<byte[]> generarReporte() {
         try (Connection connection = dataSource.getConnection()) {
-            
+
             // 1. Cargar el XML desde resources
             InputStream reportStream = getClass().getResourceAsStream("/Blank_A4_Landscape.jrxml");
-            
+
             // 2. Compilar
             JasperReport jasperReport = JasperCompileManager.compileReport(reportStream);
 
@@ -35,9 +35,9 @@ public class ReportController {
             JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, new HashMap<>(), connection);
             byte[] data = JasperExportManager.exportReportToPdf(jasperPrint);
 
-            // 4. Descargar
+            // 4. Mostrar en navegador
             return ResponseEntity.ok()
-                    .header(HttpHeaders.CONTENT_DISPOSITION, "attachment;filename=certificados.pdf")
+                    .header(HttpHeaders.CONTENT_DISPOSITION, "inline; filename=certificados.pdf")
                     .contentType(MediaType.APPLICATION_PDF)
                     .body(data);
 
