@@ -7,6 +7,13 @@ spring:
     username: ${SPRING_DATASOURCE_USERNAME}
     password: ${SPRING_DATASOURCE_PASSWORD}
     driver-class-name: org.postgresql.Driver
+    hikari:
+      # Configuración del pool de conexiones
+      maximum-pool-size: 5  # Máximo 5 conexiones (Render free tier tiene límite bajo)
+      minimum-idle: 2        # Mínimo 2 conexiones idle
+      connection-timeout: 30000  # 30 segundos timeout
+      idle-timeout: 600000   # 10 minutos antes de cerrar conexión idle
+      max-lifetime: 1800000  # 30 minutos vida máxima de una conexión
 
 server:
   # Importante: Render usa la variable PORT para saber dónde escucha tu app
